@@ -114,5 +114,17 @@ export const membersData = [
         profile_img: 'https://ibb.co/cwz8zv9',
         languages: ['html','css', 'javascript', 'react','react native ', 'nodeJS', 'mongoDB', 'express']
         
+    },
+    {
+        id:11,
+        firstName: 'Pravalika',
+        lastName: 'Ammineni',
+        email: 'pravallikaammineni@gmail.com',
+        linkedIn: 'https://www.linkedin.com/in/pravalika-a-12aa9b18a/',
+        github: 'https://github.com/pravallika89',
+        bio: 'Lorem ipsum',
+        profile_img: 'https://ca.slack-edge.com/T03A6AQRX-U01MRFW8PGA-e931aafaaa4d-512',
+        languages: ['html', 'css', 'javascript', 'react']
+        
     }
 ]
