@@ -9,6 +9,7 @@ export const membersData = [
         bio: 'Coming to California is yet another stop on my long journey all over the country.  I recently moved for the 98th time.  My hobbies are woodworking, cooking, and gaming, both tabletop and computer.',
         profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQEJxnc9lSOCoQ/profile-displayphoto-shrink_[…]78400&v=beta&t=4rLw8CsI9swqad9snNQPeCPyXLpwBCyqGrTkGyysnFo',
         languages: ['html', 'css', 'javascript', 'react'],
+        featured: false,
     },
     {
         id:2,
@@ -19,7 +20,8 @@ export const membersData = [
         github: 'https://github.com/Pardeepsanghera',
         bio: 'Lorem ipsum',
         profile_img: 'https://media-exp1.licdn.com/dms/image/C4E03AQHyFKY2L-h3Xw/profile-displayphoto-shrink_[…]78400&v=beta&t=q4gfJZVfvc9jqMy0gBYYZSxfXf1otB7hyQ3J-Pgb31I',
-        languages: ['html', 'css', 'javascript', 'react']
+        languages: ['html', 'css', 'javascript', 'react'],
+        featured:false,
     },
     {
         id:3,
@@ -30,7 +32,8 @@ export const membersData = [
         github: 'https://github.com/alexg1021',
         bio: 'lorem ipsum',
         profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQH7DxGvg3R3XA/profile-displayphoto-shrink_200_200/0/1536703041727?e=1622678400&v=beta&t=eKhvifwFxw7KfJn2_a2OzUXVuixmsa8JlgPqo6YjuBY',
-        languages: ['html','css', 'javascript']
+        languages: ['html','css', 'javascript'],
+        featured:false,
     },
     {
         id:4,
@@ -41,8 +44,8 @@ export const membersData = [
         github:'https://github.com/meru20',
         bio:'lorem ipsum',
         profile_img:'https://media-exp1.licdn.com/dms/image/C5603AQG-X6R81-W7wA/profile-displayphoto-shrink_800_800/0/1617224479322?e=1622678400&v=beta&t=rEP8dIh2J41XRE3KZtUqb8d954YybPS3OCukwZEu1C4',
-        languages:['html','css','react','javascript','java']
-
+        languages:['html','css','react','javascript','java'],
+        featured:false,
     },
     {
         id:5,
@@ -53,7 +56,8 @@ export const membersData = [
         github: 'https://github.com/xyeras',
         bio: 'lorem ipsum',
         profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQF0ROaUm_EXWw/profile-displayphoto-shrink_400_400/0/1611397157383?e=1622678400&v=beta&t=ajryz6YmZznohK-PD6Ltq63ExXHWUwm7wY54oqyO2BA',
-        languages: ['html','css', 'javascript', 'react', 'python', 'haskell', 'oz', 'c++']
+        languages: ['html','css', 'javascript', 'react', 'python', 'haskell', 'oz', 'c++'],
+        featured:false,
     },
     {
         id:6,
@@ -64,7 +68,8 @@ export const membersData = [
         github:'https://github.com/b-cavazos',
         bio:'lorem ipsum',
         profile_img:'https://media-exp1.licdn.com/dms/image/C5603AQHRFP4gIJp58g/profile-displayphoto-shrink_800_800/0/1578492310711?e=1622678400&v=beta&t=0HRaphHlpZn0giNFr799ZJyqimnglvrWnmKaKM-E9aM',
-        languages:['html','css','javascript', 'react']
+        languages:['html','css','javascript', 'react'],
+        featured:false,
     },
     {
         id:7,
@@ -75,8 +80,8 @@ export const membersData = [
         github: 'https://github.com/jeffreyriosjr',
         bio: 'lorem ipsum',
         profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQE-EURX3_t5DA/profile-displayphoto-shrink_200_200/0/1616453773735?e=1622678400&v=beta&t=BA_m1wLet2-8HhMFEkl9v5I5I1rCpMAP1G2_H3CpMgY',
-        languages: ['html','css', 'javascript', 'react']
-  
+        languages: ['html','css', 'javascript', 'react'],
+        featured:false,
     },
     {
         id:8,
@@ -87,8 +92,8 @@ export const membersData = [
         github: 'https://github.com/ludgranados',
         bio: 'Love fishing, working on a aquaterrarium tank, building things, and reading. "walks on the beach jk.."',
         profile_img: 'https://i.ibb.co/vQM2k7C/Hero-image.jpg',
-        languages: ['html', 'css', 'javascript', 'react']
-
+        languages: ['html', 'css', 'javascript', 'react'],
+        featured:false,
     },
     {
         id:9,
@@ -99,11 +104,10 @@ export const membersData = [
         github: 'https://github.com/annamariej1015',
         bio: 'lorem ipsum',
         profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQEH3UH2jdXzdQ/profile-displayphoto-shrink_400_400/0/1611110839376?e=1622678400&v=beta&t=zOKhMYmgPrDbPa4bZOIrHyp2S4Y-1uRTIgFwNmA1tgs',
-        languages: ['html', 'css', 'javascript', 'react', 'react native ', 'nodeJS', 'mongoDB', 'express']
-
+        languages: ['html', 'css', 'javascript', 'react', 'react native ', 'nodeJS', 'mongoDB', 'express'],
+        featured:false,
     },
     {
-
         id:10,
         firstName: 'Harrison',
         lastName: 'Stamps',
@@ -112,8 +116,8 @@ export const membersData = [
         github: 'https://github.com/hstamps-stack',
         bio: 'lorem ipsum',
         profile_img: 'https://ibb.co/cwz8zv9',
-        languages: ['html','css', 'javascript', 'react','react native ', 'nodeJS', 'mongoDB', 'express']
-        
+        languages: ['html','css', 'javascript', 'react','react native ', 'nodeJS', 'mongoDB', 'express'],
+        featured:false,
     },
     {
         id:11,
@@ -124,7 +128,7 @@ export const membersData = [
         github: 'https://github.com/pravallika89',
         bio: 'Lorem ipsum',
         profile_img: 'https://ca.slack-edge.com/T03A6AQRX-U01MRFW8PGA-e931aafaaa4d-512',
-        languages: ['html', 'css', 'javascript', 'react']
-        
+        languages: ['html', 'css', 'javascript', 'react'],
+        featured:true,
     }
 ]
