@@ -20,8 +20,9 @@ export const membersData = [
         linkedIn: 'linkedin.com/in/pardeep-sanghera-993b8a209',
         github: 'https://github.com/Pardeepsanghera',
         bio: 'Lorem ipsum',
-        profile_img: 'https://media-exp1.licdn.com/dms/image/C4E03AQHyFKY2L-h3Xw/profile-displayphoto-shrink_[…]78400&v=beta&t=q4gfJZVfvc9jqMy0gBYYZSxfXf1otB7hyQ3J-Pgb31I',
+        profile_img: 'https://media-exp1.licdn.com/dms/image/C4E03AQHyFKY2L-h3Xw/profile-displayphoto-shrink_200_200/0/1616519627952?e=1622678400&v=beta&t=q4gfJZVfvc9jqMy0gBYYZSxfXf1otB7hyQ3J-Pgb31I',
         languages: ['html', 'css', 'javascript', 'react'],
+        role: 'React Apprentice',
         featured:false,
         
     },

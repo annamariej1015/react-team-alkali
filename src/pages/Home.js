@@ -1,4 +1,5 @@
 import { membersData } from '../data/teamMembers';
+import MemberCard from '../components/MemberCard';
 import { useState, useEffect } from 'react';
 
 const HomePage =() =>{
@@ -29,24 +30,33 @@ const HomePage =() =>{
             <div className="row text-center mt-3">
                 <div className="col">
                     <h2>Team Alkali</h2>
+                 </div>
+                 </div>   
+                    <div className="row mt-3">
+                        <div className='col'>
+                        <div className='col text-center'>
                     <h5>
                         About Us
                     </h5>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit officia laudantium ad? Ratione modi quasi voluptates porro. Quod ex quaerat quis tempore facilis autem nesciunt odit, placeat, expedita consequuntur sapiente?</p>
-                </div>
-            </div>
-            <div className="row">
-                <ul>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                
+           
+      
+                <div className='col '>
+                
                         {members.map((member, index)=>{
-                        return(
-                            <li
-                                className="col-sm-12 col-md-3"
-                                key={member.id}>
-                                    {member.firstName}
-                            </li>   
-                        );
+                        return (
+                            <div className='col-sm-12'>
+                                <MemberCard member={member}/>
+        
+                            </div>
+                        )
                     })}
-                </ul>
+                    </div>
+                
                 
             </div>
         </div>
