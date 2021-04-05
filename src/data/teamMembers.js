@@ -37,7 +37,7 @@ export const membersData = [
         profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQH7DxGvg3R3XA/profile-displayphoto-shrink_200_200/0/1536703041727?e=1622678400&v=beta&t=eKhvifwFxw7KfJn2_a2OzUXVuixmsa8JlgPqo6YjuBY', 
         featured:false,
         role: 'React Apprenticeship leader',
-        languages: ['html','css', 'javascript']
+        languages: ['html','css', 'javascript'],
 
     },
     {
@@ -52,7 +52,6 @@ export const membersData = [
         languages:['html','css','react','javascript','java'],
         featured:false,
         role: 'React Apprentice',
-        
     },
     {
         id:5,
@@ -130,7 +129,7 @@ export const membersData = [
         bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         profile_img: 'https://media-exp1.licdn.com/dms/image/C5603AQGXMfWZzwMopA/profile-displayphoto-shrink_200_200/0/1616791326115?e=1622678400&v=beta&t=NfnQ4TAUTfkEIsA2gt_HBsv_wOLJ22NAfYDW4zDhsUc',
         role: 'React Apprentice',
-        languages: ['html','css', 'javascript', 'react','react native ', 'nodeJS', 'mongoDB', 'express']
+        languages: ['html','css', 'javascript', 'react','react native ', 'nodeJS', 'mongoDB', 'express'],
         
     },
     {
