@@ -13,8 +13,9 @@ const AppRouter = () => {
                 <Switch>
                 <Route path='/' exact component={HomePage}/>
                 <Route path='/members' exact component={Members}/>
-                <Route path='/members/:memberId' component={Member}/>
                 <Route path='/members/add' component={AddMember}/>
+                <Route path='/members/:memberId' component={Member}/>
+           
                 </Switch>
             </div>
         </div>
