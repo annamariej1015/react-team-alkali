@@ -8,15 +8,12 @@ const HomePage =() =>{
 
     useEffect(()=> {
         let profile = membersData.filter(member => member.featured);
+        
         setMembers(profile);
-        //console.log(membersData);
+      
     },[alert]);
 
-    const addMember = memberId => {
-        let addedMember = membersData.find(member =>member.id === +memberId);
-        addedMember.profile = !addedMember.profile;
-        showAlert();
-    };
+  
 
     const showAlert = () =>{
         setAlert(true);

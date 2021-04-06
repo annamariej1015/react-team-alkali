@@ -1,15 +1,42 @@
-const AddMember =() =>{
-    const handleSubmit =() =>{
+
+
+const AddMember =({member, setMember,members,setMembers}) =>{
+   
+
+    const handleSubmit = event =>{
+        event.preventDefault();
+         addNewMember();
+         clearForm();
 
     }
+    const addNewMember = () => {
+        member.id = Date.now();
+        setMembers([...members, member]);
+        console.log('members',members)
+    }
+    const clearForm = () => {
+        setMember({
+        id: '',
+        firstName: '',
+        lastName: '',
+        profile_img: '',
+        role:'',
+        bio: '',
+        email:'',
+        github: '',
+        linkedIn:'',
+        languages:'',
+        })
+
+      };
     return(
        
         <div className='row mb-5 mt-3'>
             
         <div className='col-6 offset-3'>
         <div className='row text-center'>
-                <h1 className='w-100'>Sign up </h1>
-                <p className='w-100 text-secondary' secondary> New member</p>
+                <h1 className='w-100'>Create a New Account </h1>
+                <p className='w-100 text-secondary' secondary> Be a member of the Alkali!</p>
                  </div>
           <form action='submit' id='member-form' onSubmit={handleSubmit}>
             <div className='row'>
@@ -19,10 +46,10 @@ const AddMember =() =>{
                 type='text'
                 id='firstName'
                 className='form-control'
-                value=''
-                // onChange={event => {
-                //   setHeroName(event.target.value);
-                // }}
+                value={member.firstName}
+                onChange={event => {
+                  setMember({...member, firstName:event.target.value});
+                }}
               />
             </div>
             <div className='form-group col'>
@@ -31,10 +58,10 @@ const AddMember =() =>{
                 type='text'
                 className='form-control'
                 id='lastName'
-                value=''
-                // onChange={event => {
-                //   setHeroPower(event.target.value);
-                // }}
+                value={member.lastName}
+                onChange={event => {
+                  setMember({...member,lastName:event.target.value});
+                }}
               />
             </div>
             </div>
@@ -45,63 +72,85 @@ const AddMember =() =>{
                   type='text'
                   id='profileImage'
                   className='form-control'
-                  value=''
-                //   onChange={event => {
-                //     setHeroUniverse(event.target.value);
-                //   }}
+                  value={member.profile_img}
+                  onChange={event => {
+                    setMember({...member, profile_img:event.target.value});
+                  }}
+                />
+              </div>
+              <div className='form-group'>
+                <label htmlFor='role'>Role</label>
+                <input
+                  type='text'
+                  id='role'
+                  className='form-control'
+                  value={member.role}
+                  onChange={event => {
+                    setMember({...member, role:event.target.value});
+                  }}
                 />
               </div>
               <div className='form-group'>
                 <label htmlFor='email'>Email</label>
                 <input
-                  type='number'
+                  type='text'
                   className='form-control'
                   id='email'
-                  value=''
-                //   onChange={event => {
-                //     setHeroCoolnessRating(event.target.value);
-                //   }}
+                  value={member.email}
+                  onChange={event => {
+                    setMember({...member, email:event.target.value});
+                  }}
                 />
               </div>
               <div className='form-group'>
                 <label htmlFor='linkedIn'>LinkedIn</label>
                 <input
-                  type='number'
+                  type='text'
                   className='form-control'
                   id='linkedIn'
-                  value=''
-                //   onChange={event => {
-                //     setHeroCoolnessRating(event.target.value);
-                //   }}
+                  value={member.linkedIn}
+                  onChange={event => {
+                    setMember({...member, linkedIn:event.target.value});
+                  }}
                 />
               </div>
               <div className='form-group'>
                 <label htmlFor='github'>Github</label>
                 <input
-                  type='number'
+                  type='text'
                   className='form-control'
                   id='github'
-                  value=''
-                //   onChange={event => {
-                //     setHeroCoolnessRating(event.target.value);
-                //   }}
+                  value={member.github}
+                  onChange={event => {
+                    setMember({...member, github:event.target.value});
+                  }}
                 />
               </div>
               <div className='form-group'>
                 <label htmlFor='languages'>languages</label>
                 <input
-                  type='number'
+                  type='text'
                   className='form-control'
                   id='languages'
-                  value=''
-                //   onChange={event => {
-                //     setHeroCoolnessRating(event.target.value);
-                //   }}
+                  value={member.languages}
+                  onChange={event => {
+                    setMember({...member, languages:event.target.value.split(',')});
+                  }}
                 />
               </div>
               <div className='form-group'>
                 <label htmlFor='biography'>Biography</label>
-                <textarea class="form-control" id="biography" rows="3"></textarea>
+
+                <textarea type='text'
+                className="form-control" 
+                id="biography"
+                value={member.bio} 
+                rows="3"
+                onChange={event => {
+                    setMember({...member,bio:event.target.value});
+                }}>
+
+                </textarea>
               </div>
            
             <button className='btn btn-primary btn-block'>Save</button>
