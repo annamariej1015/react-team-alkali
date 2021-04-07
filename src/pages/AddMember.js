@@ -1,34 +1,23 @@
 
 
-const AddMember =({member, setMember,members,setMembers}) =>{
+const AddMember =({member, setMember,members,setMembers,clearForm}) =>{
    
 
     const handleSubmit = event =>{
         event.preventDefault();
          addNewMember();
-         clearForm();
+         
 
     }
     const addNewMember = () => {
         member.id = Date.now();
         setMembers([...members, member]);
         console.log('members',members)
+        clearForm();
     }
-    const clearForm = () => {
-        setMember({
-        id: '',
-        firstName: '',
-        lastName: '',
-        profile_img: '',
-        role:'',
-        bio: '',
-        email:'',
-        github: '',
-        linkedIn:'',
-        languages:'',
-        })
+   
 
-      };
+      
     return(
        
         <div className='row mb-5 mt-3'>

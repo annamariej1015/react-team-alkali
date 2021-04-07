@@ -49,7 +49,7 @@ const MemberCard =({member}) =>{
                                         </a>
                                 </div>
                                 <div className='my-2 d-flex justify-content-between'>
-                                       <Link to={`/members/${member.id}`} className='card-link'>View Details</Link>
+                                       <Link to={`/members/${member.id}`}  className='card-link'>View Details</Link>
                                 </div>
                                   
                             </div>

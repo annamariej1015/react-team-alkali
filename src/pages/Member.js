@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { membersData } from '../data/teamMembers';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
@@ -7,26 +6,13 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const Member =() => {
+const Member =({member,setMember,members}) => {
     const [alert, setAlert] = useState(false);
     let { memberId } = useParams();
-    const [member, setMember] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        linkedIn: '',
-        github: '',
-        bio: '',
-        profile_img: '',
-        role: '',
-        languages: [],
-        featured: false, 
-    });
-
-    
-    
+  
     useEffect(() => {
-        let foundMember = membersData.find(m =>m.id === +memberId);
+        console.log('members',members)
+        let foundMember = members.find(m =>m.id === +memberId);
         setMember(foundMember);
     }, [member]);
 
