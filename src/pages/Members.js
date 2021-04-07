@@ -1,26 +1,26 @@
-import { membersData } from '../data/teamMembers';
+// import { membersData } from '../data/teamMembers';
 import MemberCard from '../components/MemberCard';
 import {  useState,useEffect } from 'react';
 
-const Members = () =>{
-    const [members, setMembers]= useState ([]);
+const Members = ({members, setMembers}) =>{
+    
     const [alert, setAlert] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
-        const foundMember = membersData.filter(md => {
+        const foundMember = members.filter(md => {
             return(
                 md.firstName.toLowerCase().includes(searchTerm.toLowerCase()) +
                 md.lastName.toLowerCase().includes(searchTerm.toLowerCase())
                 );
         });
         searchTerm === ''
-        ? setMembers(membersData)
+        ? setMembers(members)
         : setMembers(foundMember);
     }, [searchTerm]);
 
     const updateFeatured = memberId => {
-        let foundMember = membersData.find(member => member.id === +memberId);
+        let foundMember = members.find(member => member.id === +memberId);
         foundMember.featured = !foundMember.featured;
         
         setAlert(true);
@@ -28,6 +28,10 @@ const Members = () =>{
             setAlert(false);
         }, 2000);
     };
+    //  const addNewMember = member => {
+    //     setMembers([...members, member]);
+    //     console.log('members',members)
+    // }
 
     const handleChange = event => {
         setSearchTerm(event.target.value);
