@@ -1,22 +1,38 @@
+import {  useState } from 'react';
+const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
+  const [success, setSuccess] = useState(false);
 
-
-const AddMember =({member, setMember, addNewMember}) =>{
-   
-
-    const handleSubmit = event =>{
+  const addNewMember = () => {
+    member.id = Date.now();
+    setMembers([...members, member]);
+    console.log('members',members)
+    setSuccess(true);
+    setTimeout(() => {
+      setSuccess(false);
+    }, 2000);
+    clearForm();
+  };
+    
+  const handleSubmit = event => {
         event.preventDefault();
          addNewMember();
-         
-
     }
     
-   
-
-      
-    return(
+   return(
        
+        <div id='addMember'>
+           {success ? (
+                <div className='row'>
+                   <div className='col-6 offset-3'>
+                      <div class='alert alert-success text-center' role='alert'>
+                          You've successfully added a New Alakli!
+                      </div>
+                 </div>
+             </div>
+      ) : (
+        ''
+        )}
         <div className='row mb-5 mt-3'>
-            
         <div className='col-6 offset-3'>
         <div className='row text-center'>
                 <h1 className='w-100'>Create a New Account </h1>
@@ -141,6 +157,7 @@ const AddMember =({member, setMember, addNewMember}) =>{
           </form>
         </div>
       </div>
+      </div>  
     );
 };
 
