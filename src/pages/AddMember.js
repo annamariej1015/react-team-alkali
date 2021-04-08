@@ -1,6 +1,6 @@
 
 
-const AddMember =({member, setMember,members,setMembers,clearForm}) =>{
+const AddMember =({member, setMember, addNewMember}) =>{
    
 
     const handleSubmit = event =>{
@@ -9,12 +9,7 @@ const AddMember =({member, setMember,members,setMembers,clearForm}) =>{
          
 
     }
-    const addNewMember = () => {
-        member.id = Date.now();
-        setMembers([...members, member]);
-        console.log('members',members)
-        clearForm();
-    }
+    
    
 
       
