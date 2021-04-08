@@ -19,7 +19,7 @@ export const membersData = [
         email: 'pradeepsanghera@gmail.com',
         linkedIn: 'linkedin.com/in/pardeep-sanghera-993b8a209',
         github: 'https://github.com/Pardeepsanghera',
-        bio: 'Lorem ipsum',
+        bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         profile_img: 'https://media-exp1.licdn.com/dms/image/C4E03AQHyFKY2L-h3Xw/profile-displayphoto-shrink_200_200/0/1616519627952?e=1622678400&v=beta&t=q4gfJZVfvc9jqMy0gBYYZSxfXf1otB7hyQ3J-Pgb31I',
         languages: ['html', 'css', 'javascript', 'react'],
         role: 'React Apprentice',
