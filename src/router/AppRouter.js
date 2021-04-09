@@ -21,29 +21,16 @@ const AppRouter = () => {
         linkedIn:'',
         languages:[],
     })
-    const clearForm = () => {
-        setMember({
-        id: '',
-        firstName: '',
-        lastName: '',
-        profile_img: '',
-        role:'',
-        bio: '',
-        email:'',
-        github: '',
-        linkedIn:'',
-        languages:[],
-        })
-    }
+    
     return(
-        <div>
+        <div id= 'approuter'>
             <NavBar/>
             <div className="container">
                 <Switch>
                   <Route path='/' exact component={HomePage}/>
                   <Route exact path='/members'  render={(props) => <Members {...props} members={members} setMembers={setMembers}/>}
                    />
-                  <Route path='/members/add' render={(props) => <AddMember {...props} member={member} setMember={setMember} members={members} setMembers={setMembers} clearForm={clearForm}/>}
+                  <Route path='/members/add' render={(props) => <AddMember {...props} members={members} setMembers={setMembers} />}
                    />
                   <Route path='/members/:memberId' render={(props) => <Member {...props} member={member} setMember={setMember} members={members} setMembers={setMembers}/>}/>
            

@@ -5,10 +5,9 @@ import './App.css';
 const App = () => {
   return (
     <Router>
-      <AppRouter />
-     
+     <AppRouter />
     </Router>
-      
+   
   );
 }
 

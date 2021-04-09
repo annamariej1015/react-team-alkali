@@ -1,10 +1,8 @@
-// import { membersData } from '../data/teamMembers';
 import MemberCard from '../components/MemberCard';
 import {  useState,useEffect } from 'react';
 
 const Members = ({members, setMembers}) =>{
     
-    const [alert, setAlert] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
@@ -22,16 +20,8 @@ const Members = ({members, setMembers}) =>{
     const updateFeatured = memberId => {
         let foundMember = members.find(member => member.id === +memberId);
         foundMember.featured = !foundMember.featured;
-        
-        setAlert(true);
-        setTimeout(() => {
-            setAlert(false);
-        }, 2000);
     };
-    //  const addNewMember = member => {
-    //     setMembers([...members, member]);
-    //     console.log('members',members)
-    // }
+   
 
     const handleChange = event => {
         setSearchTerm(event.target.value);
@@ -41,7 +31,7 @@ const Members = ({members, setMembers}) =>{
         <div id='members'>
             <div className='row text-center mt-3'>
                 <div className='col'>
-                    <h2>View our Team!</h2>
+                    <h2>Meet our Team!</h2>
                 </div>
             </div>
             

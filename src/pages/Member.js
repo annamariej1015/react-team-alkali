@@ -6,8 +6,9 @@ import DetailCard from '../components/DetailCard';
 
 
 const Member =({member,setMember,members}) => {
-    const [alert, setAlert] = useState(false);
+    
     let { memberId } = useParams();
+    
   
     useEffect(() => {
         console.log('members',members)
@@ -15,16 +16,7 @@ const Member =({member,setMember,members}) => {
         setMember(foundMember);
     }, [member]);
 
-    const updateFeatured = profileId => {
-        // first find the hero from heroData by heroId
-        let foundMember = members.find(m => m.id === +profileId);
-        // updated foundHero.featured to be opposite of its current value
-        foundMember.featured = !foundMember.featured;
-        // setHero(foundHero);
-        setMember(foundMember)
-        
-        // hero.featured = !hero.featured;
-      };
+   
 
   return(
         <div id='member'>

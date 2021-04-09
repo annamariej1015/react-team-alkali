@@ -1,6 +1,32 @@
 import {  useState } from 'react';
-const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
+const AddMember =({members, setMembers}) =>{
   const [success, setSuccess] = useState(false);
+  const[member, setMember] = useState({
+    id: '',
+    firstName: '',
+    lastName: '',
+    profile_img: '',
+    role: '',
+    bio: '',
+    email:'',
+    github: '',
+    linkedIn:'',
+    languages:[],
+})
+const clearForm = () => {
+  setMember({
+  id: '',
+  firstName: '',
+  lastName: '',
+  profile_img: '',
+  role:'',
+  bio: '',
+  email:'',
+  github: '',
+  linkedIn:'',
+  languages:[],
+  })
+}
 
   const addNewMember = () => {
     member.id = Date.now();
@@ -34,11 +60,12 @@ const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
         )}
         <div className='row mb-5 mt-3'>
         <div className='col-6 offset-3'>
+          <div className='register-box'>
         <div className='row text-center'>
                 <h1 className='w-100'>Create a New Account </h1>
-                <p className='w-100 text-secondary' secondary> Be a member of the Alkali!</p>
+                <h6 className='w-100 ' > Be a member of the Alkali</h6>
                  </div>
-          <form action='submit' id='member-form' onSubmit={handleSubmit}>
+          <form action='submit' id='member-form ' className='mt-5' onSubmit={handleSubmit}>
             <div className='row'>
             <div className='form-group col'>
               <label htmlFor='firstName'>First Name</label>
@@ -46,6 +73,7 @@ const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
                 type='text'
                 id='firstName'
                 className='form-control'
+                placeholder='First Name'
                 value={member.firstName}
                 onChange={event => {
                   setMember({...member, firstName:event.target.value});
@@ -57,6 +85,7 @@ const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
               <input
                 type='text'
                 className='form-control'
+                placeholder='Last Name'
                 id='lastName'
                 value={member.lastName}
                 onChange={event => {
@@ -72,6 +101,7 @@ const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
                   type='text'
                   id='profileImage'
                   className='form-control'
+                  placeholder='Image url'
                   value={member.profile_img}
                   onChange={event => {
                     setMember({...member, profile_img:event.target.value});
@@ -84,6 +114,7 @@ const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
                   type='text'
                   id='role'
                   className='form-control'
+                  placeholder='Role'
                   value={member.role}
                   onChange={event => {
                     setMember({...member, role:event.target.value});
@@ -95,6 +126,7 @@ const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
                 <input
                   type='text'
                   className='form-control'
+                  placeholder='Email'
                   id='email'
                   value={member.email}
                   onChange={event => {
@@ -107,6 +139,7 @@ const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
                 <input
                   type='text'
                   className='form-control'
+                  placeholder='LinkedIn link'
                   id='linkedIn'
                   value={member.linkedIn}
                   onChange={event => {
@@ -119,6 +152,7 @@ const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
                 <input
                   type='text'
                   className='form-control'
+                  placeholder='Github link'
                   id='github'
                   value={member.github}
                   onChange={event => {
@@ -131,6 +165,7 @@ const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
                 <input
                   type='text'
                   className='form-control'
+                  placeholder='html,css,javascript...'
                   id='languages'
                   value={member.languages}
                   onChange={event => {
@@ -143,6 +178,7 @@ const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
 
                 <textarea type='text'
                 className="form-control" 
+                placeholder='Tell us about your self...'
                 id="biography"
                 value={member.bio} 
                 rows="3"
@@ -155,6 +191,7 @@ const AddMember =({member, setMember,members, setMembers, clearForm}) =>{
            
             <button className='btn btn-primary btn-block'>Save</button>
           </form>
+          </div>
         </div>
       </div>
       </div>  

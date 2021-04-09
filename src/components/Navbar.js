@@ -1,9 +1,11 @@
 import { Link} from 'react-router-dom';
 const Navbar = () => {
     return (
-      <nav className='navbar navbar-expand-lg navbar-dark bg-primary'>
+      
+      <nav className='navbar  navbar-expand-lg navbar-dark navbar-no-bg'>
+        
         <Link className='navbar-brand' to='/'>
-          Team Alkali
+          {`<ALKALI/>`}
         </Link>
         <button
           className='navbar-toggler'
@@ -17,14 +19,11 @@ const Navbar = () => {
         </button>
         <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
           <div className='navbar-nav ml-auto'>
-            <Link className='nav-link active' to='/'>
+            <Link className='nav-link ' to='/'>
               Homepage
             </Link>
             <Link className='nav-link' to='/members'>
                Members
-            </Link>
-            <Link className='nav-link' to='/members/:memberId'>
-               Member
             </Link>
             <Link className='nav-link' to='/members/add'>
                New Member
@@ -32,7 +31,9 @@ const Navbar = () => {
             
           </div>
         </div>
+        
       </nav>
+      
     );
   };
   export default Navbar;

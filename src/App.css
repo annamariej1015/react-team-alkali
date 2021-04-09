@@ -1,49 +1,70 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/***** AppRouter *****/
+ #approuter{
+  background-image: url(https://freellustrustrations.s3.us-east-2.amazonaws.com/free-images/thumbimg_25361957thumbejpg.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+ }
+ 
+
+
+
+
+/***** Top NavBar *****/
+ 
+.navbar {
+  background: #444;
+  -o-transition: all .6s;
+  -moz-transition: all .6s;
+  -webkit-transition: all .6s;
+  -ms-transition: all .6s;
+  transition: all .6s;
+  backface-visibility: hidden;
+}
+
+
+
+.navbar.navbar-no-bg {
+  background: #444;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.navbar-dark .navbar-nav {
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
+  border: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar-brand {
   color: white;
-}
+  font-weight:bolder;
+  font-style: italic;
+  font-family:fantasy;
+ }
 
-.App-link {
-  color: #61dafb;
-}
+/***** detailcard *****/
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.th-card-bg-img{
-  height: 300px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-repeat: no-repeat;
-  
-}
 .th-card-bg-img-member{
   height: 100%;
   background-size: cover;
@@ -52,42 +73,59 @@
   background-repeat: no-repeat;
   
 }
-.card-img-top{
-  border-radius: 20%;
-  
+.badgebox {
+  background-color: #420497;
+  color: white;
 }
+/* -----homepage--------*/
+.about h5{
+  color:whitesmoke;
+}
+.col h2 {
+  color:whitesmoke;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.col p {
+  color:white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* -----memberscard--------*/
 
 #memberscard a{
   text-decoration: none;
   outline: none;
+  
 }
-.card-wrapper {
-  margin: 5% 0;
+#memberscard .card-wrapper {
+  border-radius: 5px;
+ 
 }
 
 /* You can adjust the image size by increasing/decreasing the width, height */
-.custom-circle-image {
-  width: 10vw; /* note i used vw not px for better responsive */
-  height: 10vw;
+#memberscard .card-wrapper .custom-circle-image {
+  width: 12vw; /* note i used vw not px for better responsive */
+  height: 12vw;
 }
 
-.custom-circle-image img {
+#memberscard .card-wrapper .custom-circle-image img {
   object-fit: cover;
 }
 
-.card-title {
+#memberscard .card-wrapper .card-title {
   letter-spacing: 1.1px;
 }
 
-.card-text {
+#memberscard .card-wrapper .card-text {
   font-family: MerriweatherRegular;
   font-size: 22px;
   line-height: initial;
 }
-.image-box {
+#memberscard .card-wrapper.image-box {
   background: #ffffff;
   overflow: hidden;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+  
+  
   
 }
 #memberscard .card-wrapper .image-box img{
@@ -97,14 +135,175 @@
   -ms-transition:all .9s ease; 
   width: 100%;
   height: 200px;
+  
 
 }
-.card-wrapper:hover .image-box img{
+#memberscard .card-wrapper:hover .image-box img{
   opacity: 0.7;
   -webkit-transform:scale(1.15);
   -moz-transform:scale(1.15);
   -ms-transform:scale(1.15);
   -o-transform:scale(1.15);
   transform:scale(1.15);
+}
+#memberscard  .card-wrapper{
+  background: #FFFFFF;
+  margin-top: 50px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+#memberscard .card-wrapper:hover{
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin-top: 50px;
+}
+#memberscard h4{
+  color: #bab8f6;
+}
+
+/*----  MemberCard  ----*/
+#membercard{
+  text-align: center;
+  background: #3f2ea0;
+}
+#membercard .container{
+  padding-top: 80px; 
+  padding-bottom: 100px;
+}
+
+#membercard .card-flyer {
+  border-radius: 10px;
+}
+#membercard .card-flyer .image-box{
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+  border-radius: 5px 5px 1px 1px;
+  
+  
+  
+}
+#membercard .card-flyer .image-box img{
+  object-fit: cover;
+  object-position:center;
+  -webkit-transition:all .9s ease; 
+  -moz-transition:all .9s ease; 
+  -o-transition:all .9s ease;
+  -ms-transition:all .9s ease; 
+  width: 100%;
+  height: 300px;
+}
+#membercard .card-flyer:hover .image-box img{
+  opacity: 0.7;
+  -webkit-transform:scale(1.15);
+  -moz-transform:scale(1.15);
+  -ms-transform:scale(1.15);
+  -o-transform:scale(1.15);
+  transform:scale(1.15);
+}
+#membercard .card-flyer .text-box{
+  text-align: center;
+}
+#membercard .card-flyer .text-box .text-container{
+  padding: 30px 18px;
+}
+#membercard .card-flyer{
+  background: #FFFFFF;
+  margin-top: 50px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+#membercard .card-flyer:hover{
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin-top: 50px;
+}
+#membercard .card-flyer h4{
+ color: #b7b5f0;
+}
+
+#membercard .card-flyer h6{
+  color: #4571eb;
+ }
+ #membercard .card-flyer small{
+  color:  #b7b5f0;
+  font-size: 13px;
+ }
+
+
+/********AddMember*********/
+.register-box{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 5px;
+}
+#addMember h1{
+  margin: 0;
+    padding: 0 0 20px;
+    text-align:center;
+    font-size: 26px;
+}
+.register-box h6{
+  color: rgb(230, 217, 217);
+  
+}
+
+.register-box input{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.register-box  input[type="text"]{
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    height: 30px;
+    font-size: 16px;
+}
+.register-box  textarea{
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+  height: 30px;
+  font-size: 16px;
+}
+
+.register-box  button{
+    border: none;
+    border-radius: 19px;
+    outline: none;
+    height: 40px;
+    background: #574bc5;
+    color:#ffffff;
+    font-size: 18px;
+}
+
+.register-box  button:hover{
+    background: #0f848f;
+    cursor: pointer;
 }
 
