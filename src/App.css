@@ -169,6 +169,88 @@
 #memberscard h4{
   color: #bab8f6;
 }
+/*-----FeatureCard -----*/
+#featureCard{
+  text-align: center;
+  background: #3f2ea0;
+  width: 80%;
+  height: 80%;
+}
+#featureCard .container{
+  padding-top: 80px; 
+  padding-bottom: 100px;
+}
+
+#featureCard .card-flyer {
+  border-radius: 5px;
+  
+}
+#featureCard .card-flyer .image-box{
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+  border-radius: 5px 5px 1px 1px;
+  
+  
+  
+}
+#featureCard .card-flyer .image-box img{
+  object-fit: cover;
+  object-position:top;
+  -webkit-transition:all .9s ease; 
+  -moz-transition:all .9s ease; 
+  -o-transition:all .9s ease;
+  -ms-transition:all .9s ease; 
+  width: 100%;
+  height: 100%;
+}
+#featureCard .card-flyer:hover .image-box img{
+  opacity: 0.7;
+  -webkit-transform:scale(1.15);
+  -moz-transform:scale(1.15);
+  -ms-transform:scale(1.15);
+  -o-transform:scale(1.15);
+  transform:scale(1.15);
+}
+#featureCard .card-flyer .text-box{
+  text-align: center;
+}
+#featureCard .card-flyer .text-box .text-container{
+  padding: 30px 18px;
+}
+#featureCard .card-flyer{
+  background: #FFFFFF;
+  margin-top: 50px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+#featureCard .card-flyer:hover{
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin-top: 50px;
+}
+#featureCard .card-flyer h4, .role{
+ color: #b7b5f0;
+}
+
+#membercard .card-flyer h6{
+  color: #4571eb;
+ }
+ #featureCard .card-flyer small{
+  color:  #b7b5f0;
+  font-size: 13px;
+ }
+
+
 
 /*----  MemberCard  ----*/
 #membercard{

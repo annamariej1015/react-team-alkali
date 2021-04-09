@@ -1,5 +1,5 @@
 import { membersData } from '../data/teamMembers';
-import MemberCard from '../components/MemberCard';
+import FeatureCard from '../components/FeatureCard';
 import { useState, useEffect } from 'react';
 
 const HomePage =() =>{
@@ -37,7 +37,7 @@ return(
                         {members.map((member, index)=>{
                         return (
                             <div className='col-sm-12'>
-                                <MemberCard member={member}/>
+                                <FeatureCard member={member}/>
         
                             </div>
                         )
