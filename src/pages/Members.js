@@ -31,7 +31,7 @@ const Members = ({members, setMembers}) =>{
         <div id='members'>
             <div className='row text-center mt-3'>
                 <div className='col'>
-                    <h2>Meet ours Team!</h2>
+                    <h2>Meet our Team!</h2>
                 </div>
             </div>
             
