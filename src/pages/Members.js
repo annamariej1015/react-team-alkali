@@ -2,25 +2,25 @@ import MemberCard from '../components/MemberCard';
 import {  useState,useEffect } from 'react';
 
 const Members = ({members, setMembers}) =>{
+    const[searchMembers, setSearchMember] = useState([])
     
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
+        console.log('search:',searchMembers);
         const foundMember = members.filter(md => {
             return(
                 md.firstName.toLowerCase().includes(searchTerm.toLowerCase()) +
                 md.lastName.toLowerCase().includes(searchTerm.toLowerCase())
                 );
         });
+        
         searchTerm === ''
-        ? setMembers(members)
-        : setMembers(foundMember);
+        ? setSearchMember(members)
+        : setSearchMember(foundMember);
     }, [searchTerm]);
 
-    const updateFeatured = memberId => {
-        let foundMember = members.find(member => member.id === +memberId);
-        foundMember.featured = !foundMember.featured;
-    };
+  
    
 
     const handleChange = event => {
@@ -31,7 +31,7 @@ const Members = ({members, setMembers}) =>{
         <div id='members'>
             <div className='row text-center mt-3'>
                 <div className='col'>
-                    <h2>Meet our Team!</h2>
+                    <h2>Meet ours Team!</h2>
                 </div>
             </div>
             
@@ -52,10 +52,10 @@ const Members = ({members, setMembers}) =>{
 
             <div className='row'>
             
-                {members.map((member) => {
+                {searchMembers.map((member) => {
                     return (
                         <div className='col-sm-12 col-md-3' key={member.id}>
-                            <MemberCard member={member} updateFeatured={updateFeatured}/>
+                            <MemberCard member={member} />
 
                         </div>
                     )
